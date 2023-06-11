@@ -34,7 +34,7 @@ app.get("/users", teste1.getUsers);
 app.post("/users", teste2);
 app.delete("/users/:id", teste3);
 app.put("/users/:id", test6, teste4);
-app.get("/users/access", teste5);
+app.get("/users/access/:id", teste5);
 
 
 const port  = 3000;

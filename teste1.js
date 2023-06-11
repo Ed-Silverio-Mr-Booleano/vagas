@@ -1,15 +1,17 @@
 var data =  require("./fakeData");
-
+let times = [];
 const getUser = ( req, res, next ) => {
     
     let id =  req.params.id;
     let myData = [];
+
 
     
 
     data.map(dta =>{
        if (dta.id == id){
           myData.push(dta);
+          times.push(dta.id);
           return;
        }
     });
@@ -25,7 +27,10 @@ const getUsers = ( req, res, next ) => {
     
 };
 
+
+
 module.exports = {
+    times,
     getUser,
     getUsers
 };
