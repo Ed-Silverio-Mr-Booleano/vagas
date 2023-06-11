@@ -2,12 +2,20 @@ var data =  require("./fakeData");
 
 const getUser = ( req, res, next ) => {
     
-    var id =  req.params.id;
+    let id =  req.params.id;
+    let myData = [];
+
     
 
     data.map(dta =>{
-       dta.id == id ? res.send(dta) : res.status(200).send({msg: "User does not exist!!"});
+       if (dta.id == id){
+          myData.push(dta);
+          return;
+       }
     });
+
+    myData.length > 0 ? res.send(myData[0]) : res.status(204).send();
+
 
 };
 
