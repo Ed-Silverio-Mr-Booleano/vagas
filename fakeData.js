@@ -1,11 +1,7 @@
+const users = require("./users.json");
 
-const fakeData  =  [
-    {
-        id: 1,
-        name: "João Oliveira",
-        job: "Desenvolvedor"
-    }
-]
+console.log(users);
+const fakeData  =  users;
 
 
 module.exports = fakeData;
