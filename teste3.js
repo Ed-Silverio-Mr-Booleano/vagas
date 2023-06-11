@@ -1,4 +1,5 @@
 var data =  require("./fakeData");
+const fs = require("fs");
 
 module.exports = function(req, res) {
   
@@ -6,16 +7,23 @@ module.exports = function(req, res) {
 
 
     let removed = [];
+    let i = 0;
 
     data.map(dta =>{
        if (dta.id == id){
-          data.splice(data.indexOf(id-1), 1); // id -1, pois o array começa em zero.
+          data.splice(i, 1); 
           removed.push(dta);
           return;
        }
+       i++;
+    });
+
+    fs.writeFile("users.json", JSON.stringify(data), err => {
+        if (err) throw err;
+        res.send({msg: "This users was deleted", removed});
     });
 
 
-    res.send({msg: "This users was deleted", removed});
+    
 
 };

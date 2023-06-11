@@ -18,7 +18,7 @@ module.exports = function(req, res){
     fs.writeFile("users.json", JSON.stringify(users), err => {
         if (err) throw err;
         res.status(201).send(newUser);
-    })
+    });
     
     
 
