@@ -28,7 +28,7 @@ app.get('/', function(req, res){
   `);
 });
 
-app.get("/user", teste1.getUser);
+app.get("/user/:id", teste1.getUser);
 app.get("/users", teste1.getUsers);
 app.post("/users", teste2)
 app.delete("/users", teste3)
