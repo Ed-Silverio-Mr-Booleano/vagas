@@ -36,6 +36,8 @@ app.delete("/users/:id", teste3);
 app.put("/users/:id", test6, teste4);
 app.get("/users/access/:id", teste5);
 
+// Optei por utilzar req.params porque é bem mais amigável.
+
 
 const port  = 3000;
 app.listen(port, function(){

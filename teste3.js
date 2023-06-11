@@ -15,7 +15,7 @@ module.exports = function(req, res) {
           removed.push(dta);
           return;
        }
-       i++;
+       i++; // utilizei o i para pegar a real posição do elemento
     });
 
     fs.writeFile("users.json", JSON.stringify(data), err => {
