@@ -5,12 +5,14 @@ module.exports = function(req, res){
   
     var name =  req.body.name;
     var job =  req.body.job;
+    let roles = req.body.roles;
     let id = users.length + 1;
     
     var newUser = {
         id,
         name,
-        job
+        job,
+        roles
     }
 
     users.push(newUser);

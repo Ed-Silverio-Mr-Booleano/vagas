@@ -1,1 +1,1 @@
-[{"id":3,"name":"Joao","job":"Desenvolvedor"},{"id":3,"name":"Joao","job":"Desenvolvedor"},{"id":3,"name":"Joao","job":"Data Analist"},{"id":4,"name":"Mateus","job":"Desenvolvedor"},{"id":5,"name":"Joao","job":"Data Analist"}]
+[{"id":3,"name":"Joao","job":"Desenvolvedor"},{"id":3,"name":"Joao","job":"Desenvolvedor"},{"id":3,"name":"Joao","job":"Data Analist"},{"id":4,"name":"Mateus","job":"Desenvolvedor"},{"id":5,"name":"Joao","job":"Data Analist"},{"id":6,"name":"Joao","job":"Data Analist","roles":["delete","update"]}]
