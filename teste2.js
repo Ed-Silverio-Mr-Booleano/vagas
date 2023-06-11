@@ -1,17 +1,25 @@
-var data =  require("./fakeData");
+const fs = require("fs");
+const users = require("./users.json");
 
 module.exports = function(req, res){
   
     var name =  req.body.name;
-    var jov =  req.body.job;
+    var job =  req.body.job;
+    let id = users.length + 1;
     
     var newUser = {
-        name: name,
-        job: job,
+        id,
+        name,
+        job
     }
 
-    data.push(newUser)
+    users.push(newUser);
+
+    fs.writeFile("users.json", JSON.stringify(users), err => {
+        if (err) throw err;
+        res.status(201).send(newUser);
+    })
     
-    res.send(newUser);
+    
 
 };
